@@ -20,18 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="平平无奇小太阳">
-<meta property="og:type" content="website">
-<meta property="og:title" content="backgron">
-<meta property="og:url" content="http://example.com/tags/apache/index.html">
+  <meta name="description" content="ServletContext对象的学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ServletContext对象的学习">
+<meta property="og:url" content="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="backgron">
-<meta property="og:description" content="平平无奇小太阳">
+<meta property="og:description" content="ServletContext对象的学习">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-27T11:29:05.000Z">
+<meta property="article:modified_time" content="2021-03-27T11:29:54.878Z">
 <meta property="article:author" content="Backgron">
-<meta property="article:tag" content="GOGOGO">
+<meta property="article:tag" content="Javaweb">
+<meta property="article:tag" content="ServletContext">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/apache/">
+<link rel="canonical" href="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/">
 
 
 <script id="page-configurations">
@@ -39,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: apache | backgron</title>
+  <title>ServletContext对象的学习 | backgron</title>
   
 
 
@@ -153,51 +156,121 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">apache
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Backgron">
+      <meta itemprop="description" content="平平无奇小太阳">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="backgron">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ServletContext对象的学习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-27 19:29:05 / 修改时间：19:29:54" itemprop="dateCreated datePublished" datetime="2021-03-27T19:29:05+08:00">2021-03-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">学习过程中遇到的问题</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">ServletContext对象的学习</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h1 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h1><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>代表整个web应用，可以和程序的容器（服务器）来通信</p>
+<h3 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h3><ol>
+<li><p>通过 request 对象获取</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getServletContext();</span><br></pre></td></tr></table></figure></li>
+<li><p>通过 HttpServlet 获取</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getServletContext();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><ol>
+<li><p>获取 MIME 类型：</p>
+<ul>
+<li>MIMI 类型：在互联网通信过程中定义的一种文件数据类型</li>
+<li>格式类型： 大类型/小类型   例如： text/html    image/jpeg</li>
+<li>获取方式：</li>
+</ul>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getMimeType</span><span class="params">(String file)</span></span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>域对象：共享数据</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> setAttribute(String name,Object value);</span><br><span class="line"><span class="number">2.</span> getAttribute(String name);</span><br><span class="line"><span class="number">3.</span> removeAttribute(String name);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ServletContext对象范围：所有用户松油请求的数据</li>
+</ul>
+</li>
+<li><p>获取真实(服务器)路径</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getRealPath</span><span class="params">(String path)</span>  </span></span><br><span class="line"><span class="function">			 String b </span>= context.getRealPath(<span class="string">&quot;/b.txt&quot;</span>);<span class="comment">//web目录下资源访问</span></span><br><span class="line">	         System.out.println(b);</span><br><span class="line">	</span><br><span class="line">	        String c = context.getRealPath(<span class="string">&quot;/WEB-INF/c.txt&quot;</span>);<span class="comment">//WEB-INF目录下的资源访问</span></span><br><span class="line">	        System.out.println(c);</span><br><span class="line">	</span><br><span class="line">	        String a = context.getRealPath(<span class="string">&quot;/WEB-INF/classes/a.txt&quot;</span>);<span class="comment">//src目录下的资源访问</span></span><br><span class="line">	        System.out.println(a);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-27T09:10:10+08:00"
-              content="2021-03-27">
-          03-27
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Javaweb/" rel="tag"># Javaweb</a>
+              <a href="/tags/ServletContext/" rel="tag"># ServletContext</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/27/BeanUtils%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">BeanUtils的使用</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/27/Response%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="prev" title="Response对象的学习">
+      <i class="fa fa-chevron-left"></i> Response对象的学习
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -250,6 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ServletContext%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">ServletContext对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96"><span class="nav-number">1.0.2.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="nav-number">1.0.3.</span> <span class="nav-text">功能：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
