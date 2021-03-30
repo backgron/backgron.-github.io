@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="ServletContext对象的学习">
+  <meta name="description" content="XML和Jsoup对象的学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ServletContext对象的学习">
-<meta property="og:url" content="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="XML的学习">
+<meta property="og:url" content="http://example.com/2021/03/30/XML%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="backgron">
-<meta property="og:description" content="ServletContext对象的学习">
+<meta property="og:description" content="XML和Jsoup对象的学习">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-27T11:29:05.000Z">
-<meta property="article:modified_time" content="2021-03-30T03:53:12.916Z">
+<meta property="article:published_time" content="2021-03-30T03:56:01.000Z">
+<meta property="article:modified_time" content="2021-03-30T08:57:03.032Z">
 <meta property="article:author" content="Backgron">
 <meta property="article:tag" content="Javaweb">
-<meta property="article:tag" content="ServletContext">
+<meta property="article:tag" content="XML和Jsoup对象">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/2021/03/30/XML%E7%9A%84%E5%AD%A6%E4%B9%A0/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>ServletContext对象的学习 | backgron</title>
+  <title>XML的学习 | backgron</title>
   
 
 
@@ -163,7 +163,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/27/ServletContext%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/XML%E7%9A%84%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +176,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ServletContext对象的学习
+          XML的学习
         </h1>
 
         <div class="post-meta">
@@ -185,16 +185,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-03-27 19:29:05" itemprop="dateCreated datePublished" datetime="2021-03-27T19:29:05+08:00">2021-03-27</time>
+              <time title="创建时间：2021-03-30 11:56:01 / 修改时间：16:57:03" itemprop="dateCreated datePublished" datetime="2021-03-30T11:56:01+08:00">2021-03-30</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-30 11:53:12" itemprop="dateModified" datetime="2021-03-30T11:53:12+08:00">2021-03-30</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -206,7 +200,7 @@
             </span>
 
           
-            <div class="post-description">ServletContext对象的学习</div>
+            <div class="post-description">XML和Jsoup对象的学习</div>
 
         </div>
       </header>
@@ -217,31 +211,86 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h1><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>代表整个web应用，可以和程序的容器（服务器）来通信</p>
-<h3 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h3><ol>
-<li><p>通过 request 对象获取</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getServletContext();</span><br></pre></td></tr></table></figure></li>
-<li><p>通过 HttpServlet 获取</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getServletContext();</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><ol>
-<li><p>获取 MIME 类型：</p>
+        <h1 id="XML和Jsoup对象的学习"><a href="#XML和Jsoup对象的学习" class="headerlink" title="XML和Jsoup对象的学习"></a>XML和Jsoup对象的学习</h1><h2 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h2><ol>
+<li><p>概念：</p>
 <ul>
-<li>MIMI 类型：在互联网通信过程中定义的一种文件数据类型</li>
-<li>格式类型： 大类型/小类型   例如： text/html    image/jpeg</li>
-<li>获取方式：</li>
-</ul>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getMimeType</span><span class="params">(String file)</span></span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>域对象：共享数据</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> setAttribute(String name,Object value);</span><br><span class="line"><span class="number">2.</span> getAttribute(String name);</span><br><span class="line"><span class="number">3.</span> removeAttribute(String name);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>ServletContext对象范围：所有用户松油请求的数据</li>
+<li>可扩展：标签都是自己定义的</li>
+<li>功能：存储数据 配置文件</li>
+<li>特点：自定义标签，语法严格，存储数据</li>
 </ul>
 </li>
-<li><p>获取真实(服务器)路径</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getRealPath</span><span class="params">(String path)</span>；</span></span><br></pre></td></tr></table></figure>
-
+<li><p>语法：</p>
+<ul>
+<li>后缀名： .xml</li>
+<li>第一行为文档声明</li>
+<li>有且仅有一个根标签</li>
+<li>属性必须使用引号括起来</li>
+<li>标签正确关闭</li>
+<li>区分大小写</li>
+</ul>
+</li>
+<li><p>组成部分：</p>
+<ul>
+<li>文档声明：<ul>
+<li>格式：<?xml 属性列表?></li>
+<li>属性列表：<ul>
+<li>version：版本号  必须有</li>
+<li>encoding：编码方式</li>
+<li>standalone：是否独立  yes 独立  no  不独立</li>
+</ul>
+</li>
+<li>属性：id属性值唯一</li>
+<li>文本CDATA区域会被原样展示  <![CDATA[数据]]></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>约束：</p>
+<ul>
+<li><p>分类：</p>
+<ul>
+<li>DTD：一种简单的约束技术   .dtd</li>
+<li>Schema：一种复杂的约束技术  .xsd</li>
+</ul>
+</li>
+<li><p>DTD：</p>
+<ul>
+<li>引入dtd文档到xml文档中</li>
+<li>内部dtd：将约束规则定义在xml文档中</li>
+<li>外部dtd：将约束的规则定义在外部的dtd文件中</li>
+<li>本地：<!DOCTYPE 根标签名 SYSTEM "dtd文件的位置"></li>
+<li>网络：<!DOCTYPE 根标签名 PUBLIC "dtd文件名字" "dtd文件的位置URL"></li>
+</ul>
+</li>
+<li><p>Schema:</p>
+<ul>
+<li><p>填写xml文档的根元素</p>
+</li>
+<li><p>引入xsi前缀.  xmlns:xsi=”<a target="_blank" rel="noopener" href="http://www.w3.org/2001/XMLSchema-instance&quot;">http://www.w3.org/2001/XMLSchema-instance&quot;</a></p>
+</li>
+<li><p>引入xsd文件命名空间.  xsi:schemaLocation=”<a target="_blank" rel="noopener" href="http://www.itcast.cn/xml">http://www.itcast.cn/xml</a>  student.xsd”</p>
+</li>
+<li><p>为每一个xsd约束声明一个前缀,作为标识  xmlns=”<a target="_blank" rel="noopener" href="http://www.itcast.cn/xml&quot;">http://www.itcast.cn/xml&quot;</a> </p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">students</span>   <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">					<span class="attr">xmlns</span>=<span class="string">&quot;http://www.itcast.cn/xml&quot;</span></span></span><br><span class="line"><span class="tag">					<span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.itcast.cn/xml  student.xsd&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="JAVA中的Jsoup类：解析html或者xml文件"><a href="#JAVA中的Jsoup类：解析html或者xml文件" class="headerlink" title="JAVA中的Jsoup类：解析html或者xml文件"></a>JAVA中的Jsoup类：解析html或者xml文件</h2><ol>
+<li><p>Jsoup 获取document对象方法：</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>Jsoup.parse(file,<span class="string">&quot;utf-8&quot;</span>);   通过本地路径获取</span><br><span class="line"><span class="number">2.</span>Jsoup.parse(url,time);	通过网络地址获取 </span><br><span class="line"><span class="number">3.</span>Jsoup.parse(str)；	通过字符串获取   不常用</span><br></pre></td></tr></table></figure></li>
+<li><p>通过document获取Elemenet对象</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">通过document获取Element对象  （部分）</span><br><span class="line">	<span class="number">1.</span>通过TagName</span><br><span class="line">		document.getElementsByTag(<span class="string">&quot;tagname&quot;</span>);</span><br><span class="line">	<span class="number">2.</span>通过属性名获取</span><br><span class="line">		document.getElementsByAttribute(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">	<span class="number">3.</span>通过属性值获取</span><br><span class="line">		document.getElementsByAttributeValue(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">	<span class="number">4.</span>通过id值获取</span><br><span class="line">		document.getElementById(<span class="string">&quot;value&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>ELement 对象：</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>获取子元素</span><br><span class="line">    <span class="number">1.</span>通过TagName</span><br><span class="line">    document.getElementsByTag(<span class="string">&quot;tagname&quot;</span>);</span><br><span class="line">    <span class="number">2.</span>通过属性名获取</span><br><span class="line">    document.getElementsByAttribute(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    <span class="number">3.</span>通过属性值获取</span><br><span class="line">    document.getElementsByAttributeValue(<span class="string">&quot;name&quot;</span>,<span class="string">&quot;lisi&quot;</span>);</span><br><span class="line">    <span class="number">4.</span>通过id值获取</span><br><span class="line">    document.getElementById(<span class="string">&quot;value&quot;</span>)</span><br><span class="line"><span class="number">2.</span>获取属性值  .attr(key);</span><br><span class="line">    String name=element.attr(<span class="string">&quot;name&quot;</span>);</span><br><span class="line"><span class="number">3.</span>获取文本内容</span><br><span class="line">    String text=element.text();</span><br><span class="line">    String html=element.html();</span><br></pre></td></tr></table></figure></li>
+<li><p>快速查询方式：</p>
+<ul>
+<li><p>Selector 选择器查询</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.select(cssQuery);</span><br></pre></td></tr></table></figure></li>
+<li><p>Xpath查询</p>
+</li>
+</ul>
 </li>
 </ol>
 
@@ -254,7 +303,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Javaweb/" rel="tag"># Javaweb</a>
-              <a href="/tags/ServletContext/" rel="tag"># ServletContext</a>
+              <a href="/tags/XML%E5%92%8CJsoup%E5%AF%B9%E8%B1%A1/" rel="tag"># XML和Jsoup对象</a>
           </div>
 
         
@@ -263,13 +312,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/27/Response%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="prev" title="Response对象的学习">
-      <i class="fa fa-chevron-left"></i> Response对象的学习
+    <a href="/2021/03/30/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/" rel="prev" title="MVC开发模式">
+      <i class="fa fa-chevron-left"></i> MVC开发模式
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/29/Cookie%E5%92%8CSession%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="next" title="Cookie和Session的学习">
-      Cookie和Session的学习 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -328,7 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ServletContext%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">ServletContext对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96"><span class="nav-number">1.0.2.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="nav-number">1.0.3.</span> <span class="nav-text">功能：</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XML%E5%92%8CJsoup%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">XML和Jsoup对象的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XML"><span class="nav-number">1.1.</span> <span class="nav-text">XML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA%E4%B8%AD%E7%9A%84Jsoup%E7%B1%BB%EF%BC%9A%E8%A7%A3%E6%9E%90html%E6%88%96%E8%80%85xml%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">JAVA中的Jsoup类：解析html或者xml文件</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
