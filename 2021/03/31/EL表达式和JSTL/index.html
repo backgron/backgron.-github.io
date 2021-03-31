@@ -20,20 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="平平无奇小太阳">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http://example.com/schedule/index.html">
+  <meta name="description" content="EL表达式和JSTL的学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EL表达式和JSTL">
+<meta property="og:url" content="http://example.com/2021/03/31/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL/index.html">
 <meta property="og:site_name" content="backgron">
-<meta property="og:description" content="平平无奇小太阳">
+<meta property="og:description" content="EL表达式和JSTL的学习">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-23T08:25:58.000Z">
-<meta property="article:modified_time" content="2021-03-23T08:25:58.039Z">
+<meta property="article:published_time" content="2021-03-31T01:42:33.000Z">
+<meta property="article:modified_time" content="2021-03-31T01:43:29.058Z">
 <meta property="article:author" content="Backgron">
-<meta property="article:tag" content="GOGOGO">
+<meta property="article:tag" content="Javaweb">
+<meta property="article:tag" content="JSP">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/schedule/">
+<link rel="canonical" href="http://example.com/2021/03/31/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL/">
 
 
 <script id="page-configurations">
@@ -41,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>schedule | backgron
-</title>
+  <title>EL表达式和JSTL | backgron</title>
   
 
 
@@ -155,43 +155,225 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/31/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Backgron">
+      <meta itemprop="description" content="平平无奇小太阳">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="backgron">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          EL表达式和JSTL
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">schedule
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-03-31 09:42:33 / 修改时间：09:43:29" itemprop="dateCreated datePublished" datetime="2021-03-31T09:42:33+08:00">2021-03-31</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">EL表达式和JSTL的学习</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="EL表达式和JSTL"><a href="#EL表达式和JSTL" class="headerlink" title="EL表达式和JSTL"></a>EL表达式和JSTL</h1><h2 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h2><ol>
+<li><p>概念：Expression Language 表达式语言</p>
+</li>
+<li><p>作用：替换和简化jsp页面中java代码的编写</p>
+</li>
+<li><p>语法：${表达式}</p>
+</li>
+<li><p>注意：jsp默认支持el表达式的。如果要忽略el表达式</p>
+<ul>
+<li>设置jsp中page指令中：isELIgnored=“true” 忽略当前jsp页面所偶的el表达式</li>
+<li>\${表达式} ：忽略当前这个el表达式</li>
+</ul>
+</li>
+<li><p>使用：</p>
+<ol>
+<li><p>运算：</p>
+<ul>
+<li>运算符：<ol>
+<li>算术运算符：+    -    *    /(div)    %(mod)</li>
+<li>比较运算符：&gt;  &lt;   &gt;=   &lt;=   ==  !=</li>
+<li>逻辑运算符：&amp;&amp;(and)  ||(or)  !(not)</li>
+<li>空运算符：empty<ul>
+<li>功能：用于判断字符串、集合、数组对象是否为null或者长度是否为0</li>
+<li>${empty list}：判断字符串、集合、数组对象是否为null或者长度为0</li>
+<li>${not empty str}：表示判断字符串、集合、数组对象是否为null 并且 长度&gt;0</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>获取值</p>
+<ol>
+<li><p>el表达式只能从与对象中获取值</p>
+</li>
+<li><p>语法：</p>
+<ul>
+<li><p>${与名称.键名}：从指定域中获取指定键的值</p>
+  <figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>pageScope---------&gt;pageContext</span><br><span class="line"><span class="number">2.</span>requestScope------&gt;request</span><br><span class="line"><span class="number">3.</span>sessionScope------&gt;session</span><br><span class="line"><span class="number">4.</span>applicationScope--&gt;application(SerletContext)</span><br></pre></td></tr></table></figure></li>
+<li><p>${键名}：表示依次从最小的域中查找是否有该键对应的值，直到找到为止</p>
+</li>
+</ul>
+</li>
+<li><p>获取对象、List集合、Map集合的值</p>
+<ol>
+<li>对象：${域名称.键名.属性名}<ul>
+<li>本质上回去当调用对象的getter方法</li>
+</ul>
+</li>
+<li>List集合：${域名称.键名[索引]}</li>
+<li>Map集合：<ul>
+<li>${域名称.键名.key名称}</li>
+<li>${域名称.键名[“key名称”]}</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>隐式对象：</p>
+<ul>
+<li><p>el表达式中有11一个隐式对象</p>
+</li>
+<li><p>pageContext：</p>
+<ul>
+<li><p>获取jsp其他八个内置对象</p>
+  <figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;pageContext.request.contextPath&#125;：动态获取虚拟目录</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h2><ol>
+<li>概念： JavaServer page Tag Library  JSP标准标签库</li>
+<li>作用：用于简化和替换jsp页面上的Java代码</li>
+<li>使用步骤：<ul>
+<li>导入jstl相关jar包</li>
+<li>引入标签库：taglib指令  &lt;%@ taglib %&gt;</li>
+<li>使用标签</li>
+</ul>
+</li>
+<li>常用的JSTL标签<ol>
+<li>if：相当于java代码里的if语句<ul>
+<li>属性：<ul>
+<li>test 必须属性，接受bolean表达式</li>
+<li>如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容</li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>c:if 标签没有else情况，要想要else情况，可以再定义一个c:if 标签</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>choose：相当于java代码switch语句<ul>
+<li>使用choose标签声明    相当于switch声明</li>
+<li>使用when标签做判断    相当于case</li>
+<li>使用otherwise标签做其他情况的声明    相当于default</li>
+</ul>
+</li>
+<li>foreach：相当于java中的for循环  可以完成重复操作  遍历容器<ul>
+<li>完成重复操作：<ul>
+<li>begin：开始值</li>
+<li>end：结束值</li>
+<li>var：临时变量</li>
+<li>step：步长</li>
+<li>varStatus：循环状态对象<ul>
+<li>index：容器中元素的索引，从0开始</li>
+<li>count：循环次数，从1开始</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>遍历容器<ul>
+<li>items：容器对象</li>
+<li>var：容器中元素的临时变量</li>
+<li>varStatus：循环状态对象<ul>
+<li>index：容器中元素的索引，从0开始</li>
+<li>count：循环次数，从1开始</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Javaweb/" rel="tag"># Javaweb</a>
+              <a href="/tags/JSP/" rel="tag"># JSP</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/30/XML%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="prev" title="XML的学习">
+      <i class="fa fa-chevron-left"></i> XML的学习
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -242,6 +424,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EL%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8CJSTL"><span class="nav-number">1.</span> <span class="nav-text">EL表达式和JSTL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EL%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">EL表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSTL"><span class="nav-number">1.2.</span> <span class="nav-text">JSTL</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
