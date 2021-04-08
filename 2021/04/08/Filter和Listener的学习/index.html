@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="JSP对象的学习">
+  <meta name="description" content="Filter和Listener的学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSP的学习">
-<meta property="og:url" content="http://example.com/2021/03/30/JSP%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="Filter和Listener的学习">
+<meta property="og:url" content="http://example.com/2021/04/08/Filter%E5%92%8CListener%E7%9A%84%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="backgron">
-<meta property="og:description" content="JSP对象的学习">
+<meta property="og:description" content="Filter和Listener的学习">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-29T16:04:54.000Z">
-<meta property="article:modified_time" content="2021-03-31T00:34:47.155Z">
+<meta property="article:published_time" content="2021-04-08T04:33:21.000Z">
+<meta property="article:modified_time" content="2021-04-08T04:37:12.123Z">
 <meta property="article:author" content="Backgron">
 <meta property="article:tag" content="Javaweb">
-<meta property="article:tag" content="JSP">
+<meta property="article:tag" content="Filter和Listener的学习">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/03/30/JSP%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+<link rel="canonical" href="http://example.com/2021/04/08/Filter%E5%92%8CListener%E7%9A%84%E5%AD%A6%E4%B9%A0/">
 
 
 <script id="page-configurations">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>JSP的学习 | backgron</title>
+  <title>Filter和Listener的学习 | backgron</title>
   
 
 
@@ -163,7 +163,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/JSP%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/08/Filter%E5%92%8CListener%E7%9A%84%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +176,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JSP的学习
+          Filter和Listener的学习
         </h1>
 
         <div class="post-meta">
@@ -185,16 +185,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-03-30 00:04:54" itemprop="dateCreated datePublished" datetime="2021-03-30T00:04:54+08:00">2021-03-30</time>
+              <time title="创建时间：2021-04-08 12:33:21 / 修改时间：12:37:12" itemprop="dateCreated datePublished" datetime="2021-04-08T12:33:21+08:00">2021-04-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-31 08:34:47" itemprop="dateModified" datetime="2021-03-31T08:34:47+08:00">2021-03-31</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -206,7 +200,7 @@
             </span>
 
           
-            <div class="post-description">JSP对象的学习</div>
+            <div class="post-description">Filter和Listener的学习</div>
 
         </div>
       </header>
@@ -217,142 +211,126 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="JSP的学习"><a href="#JSP的学习" class="headerlink" title="JSP的学习"></a>JSP的学习</h1><ol>
-<li>概念<ul>
-<li>Java Server Pages:java服务器端页面<ul>
-<li>可以理解为：一个特殊的页面，其中及可以指定定义HTML标签，又可以定义java代码</li>
-<li>用于简化书写！！！</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>原理<ul>
-<li>JSP本质上就是一个Servlet</li>
-</ul>
-</li>
-<li>JSP的脚本：JSP定义java代码的方式<ol>
-<li>&lt;%  代码 %&gt;<ul>
-<li>定义的java代码，在Service方法中。Service方法中可以定义什么，该脚本就可以定义什么</li>
-</ul>
-</li>
-<li>&lt;%!  代码  %&gt;<ul>
-<li>定义的Java代码，在jsp转换后的java类的成员位置(成员变量或者成员发方法)</li>
-</ul>
-</li>
-<li>&lt;%=  代码  %&gt;<ul>
-<li>定义的java代码，会输出到页面上。输出语句中可以定义什么，该脚本中就可以定义什么</li>
-</ul>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="JSP中的指令"><a href="#JSP中的指令" class="headerlink" title="JSP中的指令"></a>JSP中的指令</h2><ul>
-<li>作用：用于配置JSP页面，带入资源文件</li>
-<li>格式：&lt;%@ 指令名称  属性名1=属性值1  属性名2=属性值2……%&gt;</li>
-<li>分类：<ol>
-<li>page：配置JSP页面的<ul>
-<li>contentType：等同于response.setContentType();<ul>
-<li>设置响应体的mine类型以及字符集</li>
-<li>设置当前jsp页面的编码(只有高级的IDE才能生效，如果使用低级工具，则需要设置pageEncoding属性设置当前页面的字符集)</li>
-</ul>
-</li>
-<li>import：导包</li>
-<li>errorPage：当前页面发生异常后，会自动跳转到指定的错误页面</li>
-<li>isErrorPage：标识当前页面是否为错误页面</li>
-</ul>
-</li>
-<li>include：页面包含的其他页面,导入页面的资源文件<ul>
-<li>&lt;%@include file=”top.jsp”%&gt;</li>
-</ul>
-</li>
-<li>taglib: 导入资源<ul>
-<li>&lt;%@ taglib prefix=”c” uri=”<a target="_blank" rel="noopener" href="http://java.sun.com/jsp/jstl/core&quot;">http://java.sun.com/jsp/jstl/core&quot;</a> %&gt;</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="JSP中的注释"><a href="#JSP中的注释" class="headerlink" title="JSP中的注释"></a>JSP中的注释</h2><ol>
-<li>html注释：<ul>
-<li><!-- --> ：只能注释html的代码片段(不推荐)</li>
-</ul>
-</li>
-<li>JSP注释<ul>
-<li>&lt;%–  –%&gt; ： 可以注释所有(推荐)</li>
-</ul>
-</li>
-</ol>
-<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><ol start="3">
-<li><p>内置对象</p>
+        <h1 id="Filter-和-Listener"><a href="#Filter-和-Listener" class="headerlink" title="Filter 和 Listener"></a>Filter 和 Listener</h1><h2 id="Filter：监听器"><a href="#Filter：监听器" class="headerlink" title="Filter：监听器"></a>Filter：监听器</h2><ol>
+<li><p>概念：</p>
 <ul>
-<li><p>在jsp页面中不需要创建，直接使用的对象</p>
+<li>当访问服务器资源时，过滤器可以将请求拦截下来，完成一些特殊的功能</li>
+<li>一般用于完成通用的操作。如：登陆验证、统一编码处理、敏感字符过滤等</li>
+</ul>
 </li>
-<li><p>一共有9个：</p>
+<li><p>快速入门：</p>
+<ul>
+<li>定义一个类，实现Filter接口</li>
+<li>复写方法</li>
+<li>配置拦截路径：web.xml 或者  注解</li>
+</ul>
+</li>
+<li><p>过滤器细节</p>
+<ol>
+<li><p>web.xml配置</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>demo1<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">filterclass</span>&gt;</span>cn.itcast.web.filter.FilterDemo1<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>demo1<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- 拦截路径 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>过滤器执行流程</p>
+<ul>
+<li>执行过滤器</li>
+<li>执行放行后的资源</li>
+<li>回来执行过滤器放行代码下的代码</li>
+</ul>
+</li>
+<li><p>过滤器声明周期</p>
+<ul>
+<li>init：在服务器启动后，会创建Filter对昂，然后调用init方法。只执行一次。用于加载资源</li>
+<li>doFilter：每次请求被拦截资源是，会执行，可以多次执行</li>
+<li>destroy：在服务器关闭后，Filter对象被销毁。如果服务器正常关闭，则会执行destroy方法。只执行一次。用于释放资源</li>
+</ul>
+</li>
+<li><p>过滤器配置详解</p>
+<ul>
+<li><p>路径配置：</p>
+<ol>
+<li>/index.jsp  只有访问index.jsp资源时，过滤器才会被执行</li>
+<li>拦截目录：/user/* 访问/user下的所有资源时，过滤器都会被执行</li>
+<li>后缀名拦截：*.jsp 访问所有后缀名为jsp资源时，过滤器都会被执行</li>
+<li>拦截所有资源：/* 访问所有资源，过滤器都会被执行</li>
+</ol>
+</li>
+<li><p>拦截方式配置：</p>
+<ol>
+<li><p>注解配置：设置dispatcherTypes属性</p>
+<ul>
+<li>REQUEST：默认值。浏览器直接请求资源</li>
+<li>FORWARD：转发访问资源</li>
+<li>INCLUDE：包含访问资源</li>
+<li>ERROR：错误跳转资源</li>
+<li>ASYNC：异步访问资源</li>
+</ul>
+</li>
+<li><p>webxml配置      </p>
+<ul>
+<li>设置<dispatcher></dispatcher>标签即可</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>过滤器链(配置多个过滤器)</p>
+<ul>
+<li>执行顺序：如果有两个过滤器： 过滤器1和过滤器2<ol>
+<li>过滤器1</li>
+<li>过滤器2</li>
+<li>执行资源</li>
+<li>过滤器2</li>
+<li>过滤器1</li>
+</ol>
+</li>
+<li>过滤器先后顺序：<ol>
+<li>注解配置：按照类名的字符串比较规则比较，较小的限制性</li>
+<li>web.xml配置：<filter-mapping>谁定义在上面谁先执行</li>
+</ol>
 </li>
 </ul>
 </li>
 </ol>
-<table>
-<thead>
-<tr>
-<th>变量名</th>
-<th>真实类型</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>pageContext</td>
-<td>PageContext</td>
-<td>当前页面共享数据，还可以获取其他八个内置对象</td>
-</tr>
-<tr>
-<td>request</td>
-<td>HttpServletRequest</td>
-<td>一次请求访问的多个资源(转发)</td>
-</tr>
-<tr>
-<td>session</td>
-<td>HttpSession</td>
-<td>一次会话的多个请求间</td>
-</tr>
-<tr>
-<td>application</td>
-<td>ServletContext</td>
-<td>所有用户间共享数据</td>
-</tr>
-<tr>
-<td>response</td>
-<td>HttpServletResponse</td>
-<td>响应对象</td>
-</tr>
-<tr>
-<td>page</td>
-<td>Object</td>
-<td>当前页面(Servlet)的对象 this</td>
-</tr>
-<tr>
-<td>out</td>
-<td>JspWriter</td>
-<td>输出对象，数据输出到页面上</td>
-</tr>
-<tr>
-<td>config</td>
-<td>ServletConfig</td>
-<td>Servlet的配置对象</td>
-</tr>
-<tr>
-<td>exception</td>
-<td>Throwable</td>
-<td>异常对象</td>
-</tr>
-</tbody></table>
-<pre><code>    注意：
-    
-    1. out：字符输出流对象。可以将数据输出到页面上。和response.getWriter()类似
-    2.  response.getWriter()和out.write()的区别：
-        + 在tomcat服务器真正给客户端做出响应之前，会先找response缓冲区数据，再找out缓冲区数据。
-        +  response.getWriter()数据输出永远在out.write()之前
-</code></pre>
+</li>
+</ol>
+<h2 id="Listener：监听器"><a href="#Listener：监听器" class="headerlink" title="Listener：监听器"></a>Listener：监听器</h2><ol>
+<li><p>概念：web的三大组件之一</p>
+<ul>
+<li>事件监听机制：<ul>
+<li>事件：一件事情</li>
+<li>事件源：事情发生的地方</li>
+<li>监听器：一个对象</li>
+<li>注册监听：将事件、事件源、监听器绑定在一起。当事件源上发生某个事件后，执行监听器代码</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ServletContextListener：监听ServletContext对象的创建和销毁：</p>
+<ul>
+<li><p>方法：</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">contextDestroyed</span><span class="params">(ServletContextEvent sce)</span>:ServletContext对象被销毁之前会调用该方法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span>:ServletContext对象创建后会调用该方法</span></span><br></pre></td></tr></table></figure></li>
+<li><p>步骤：</p>
+<ol>
+<li><p>定义一个类，实现ServletContextListener接口</p>
+</li>
+<li><p>复写方法</p>
+</li>
+<li><p>配置：</p>
+<ul>
+<li><p>web.xml</p>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span>				 <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>cn.itcast.web.listener.ContextLoaderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span>			</span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"></span><br><span class="line">* 指定初始化参数<span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>注解</p>
+<ul>
+<li>@WebListener</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
 
     </div>
 
@@ -363,7 +341,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Javaweb/" rel="tag"># Javaweb</a>
-              <a href="/tags/JSP/" rel="tag"># JSP</a>
+              <a href="/tags/Filter%E5%92%8CListener%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="tag"># Filter和Listener的学习</a>
           </div>
 
         
@@ -372,12 +350,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/29/Cookie%E5%92%8CSession%E7%9A%84%E5%AD%A6%E4%B9%A0/" rel="prev" title="Cookie和Session的学习">
-      <i class="fa fa-chevron-left"></i> Cookie和Session的学习
+    <a href="/2021/03/31/web%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E5%92%8Ctomcat/" rel="prev" title="web相关知识和tomcat">
+      <i class="fa fa-chevron-left"></i> web相关知识和tomcat
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/30/MVC%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F/" rel="next" title="MVC开发模式">
-      MVC开发模式 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/04/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%9D%E6%AD%A5%E6%8E%A5%E8%A7%A6/" rel="next" title="设计模式初步接触">
+      设计模式初步接触 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -437,7 +415,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP%E7%9A%84%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">JSP的学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP%E4%B8%AD%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="nav-number">1.1.</span> <span class="nav-text">JSP中的指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">JSP中的注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.3.</span> <span class="nav-text">内置对象</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Filter-%E5%92%8C-Listener"><span class="nav-number">1.</span> <span class="nav-text">Filter 和 Listener</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Filter%EF%BC%9A%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">Filter：监听器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Listener%EF%BC%9A%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">Listener：监听器</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
