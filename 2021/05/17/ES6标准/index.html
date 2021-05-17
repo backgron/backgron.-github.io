@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="JavaScript ES6标准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6标准">
+<meta property="og:url" content="http://example.com/2021/05/17/ES6%E6%A0%87%E5%87%86/index.html">
+<meta property="og:site_name" content="backgron">
+<meta property="og:description" content="JavaScript ES6标准">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-17T14:51:08.000Z">
+<meta property="article:modified_time" content="2021-05-17T14:52:14.952Z">
+<meta property="article:author" content="Backgron">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/05/17/ES6%E6%A0%87%E5%87%86/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ES6标准 | backgron</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">backgron</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">温文尔雅，纯净自然</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/17/ES6%E6%A0%87%E5%87%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Backgron">
+      <meta itemprop="description" content="平平无奇小太阳">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="backgron">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ES6标准
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-17 22:51:08 / 修改时间：22:52:14" itemprop="dateCreated datePublished" datetime="2021-05-17T22:51:08+08:00">2021-05-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">JavaScript ES6标准</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="JavaScript-ES6标准"><a href="#JavaScript-ES6标准" class="headerlink" title="JavaScript ES6标准"></a>JavaScript ES6标准</h1><h2 id="类-Class"><a href="#类-Class" class="headerlink" title="类 Class"></a>类 Class</h2><h3 id="类-构造函数-属性-方法"><a href="#类-构造函数-属性-方法" class="headerlink" title="类 构造函数 属性 方法"></a>类 构造函数 属性 方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;  <span class="comment">//类</span></span><br><span class="line">    <span class="function"><span class="title">construcor</span>(<span class="params">name,age</span>)</span>&#123;  <span class="comment">//构造函数</span></span><br><span class="line">        <span class="built_in">this</span>.name = name;  <span class="comment">//属性</span></span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123; <span class="comment">//方法</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;hello world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> per=<span class="keyword">new</span> Person(<span class="string">&quot;name&quot;</span>,<span class="number">18</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="继承-extends"><a href="#继承-extends" class="headerlink" title="继承 extends"></a>继承 extends</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">extends</span> <span class="title">Person</span></span>&#123;  <span class="comment">//继承</span></span><br><span class="line">    <span class="function"><span class="title">construcor</span>(<span class="params">name,age,id</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">super</span>(name,age);  <span class="comment">//super指向父类构造方法  必须放在this之前</span></span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">super</span>.say()+<span class="string">&quot;自己的&quot;</span>);  <span class="comment">//super 指向父类一般方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项和this指向"><a href="#注意事项和this指向" class="headerlink" title="注意事项和this指向"></a>注意事项和this指向</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 在ES6中，类没有变量提升，所以必须先定义类，才能通过类实例化对象</span><br><span class="line"><span class="number">2.</span> 类里面共有的属性和方法一定要加<span class="built_in">this</span>使用</span><br><span class="line"><span class="number">3.</span> construcor里面的<span class="built_in">this</span>只想实例对象</span><br><span class="line"><span class="number">4.</span> 方法里面的<span class="built_in">this</span>指向这个方法的调用者</span><br></pre></td></tr></table></figure>
+
+<h2 id="ES6-的新生语法"><a href="#ES6-的新生语法" class="headerlink" title="ES6 的新生语法"></a>ES6 的新生语法</h2><h3 id="let关键字"><a href="#let关键字" class="headerlink" title="let关键字"></a>let关键字</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="number">1.</span> 用来声明变量，具有块级作用域</span><br><span class="line"><span class="number">2.</span> 不存在变量提升</span><br><span class="line"><span class="number">3.</span> 具有暂时死区特性，会和当前块级区域绑定，影响<span class="keyword">var</span>声明的同名变量</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"><span class="number">1.</span> 在&#123;&#125; 中，使用<span class="keyword">let</span>声明的变量才有作用域，用<span class="keyword">var</span>不具备块级作用域</span><br><span class="line"><span class="number">2.</span> 在<span class="keyword">for</span>（）中使用<span class="keyword">let</span> 可以防止循环变量变成全局变量</span><br></pre></td></tr></table></figure>
+
+<h3 id="const-关键字"><a href="#const-关键字" class="headerlink" title="const 关键字"></a>const 关键字</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a=<span class="number">1</span>;</span><br><span class="line"><span class="number">1.</span> 具有块级作用域</span><br><span class="line"><span class="number">2.</span> 声明常量</span><br><span class="line"><span class="number">3.</span> 必须赋初始值</span><br><span class="line"><span class="number">4.</span> 常量复制后，值（地址）不能修改（对于简单类型，不能修改值。对于复杂类型，可以修改复杂类型内部的值，不能改地址） </span><br></pre></td></tr></table></figure>
+
+<h3 id="数组解构赋值"><a href="#数组解构赋值" class="headerlink" title="数组解构赋值"></a>数组解构赋值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">将数组中的值分别赋给abc  </span><br></pre></td></tr></table></figure>
+
+<h3 id="对象解构"><a href="#对象解构" class="headerlink" title="对象解构"></a>对象解构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">name</span>:<span class="string">&#x27;lisi&#x27;</span>，age:<span class="number">30</span>，sex:<span class="string">&#x27;男&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age,sex&#125; = person;</span><br><span class="line">将变量名匹配对象的属性，匹配成功后赋值</span><br><span class="line"></span><br><span class="line">变量名和属性名也可以不同  通过冒号连接    属性：变量名</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>:myName,<span class="attr">age</span>:myAge&#125; = person;</span><br></pre></td></tr></table></figure>
+
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fn = <span class="function">(<span class="params">x,y</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x+y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="number">1.</span> 如果函数体只有一句代码，并且执行结果就时函数的返回值，函数体的大括号可以省略</span><br><span class="line"><span class="number">2.</span> 如果形参只有一个 形参外侧的小括号也可以省略</span><br><span class="line"><span class="number">3.</span> 箭头函数中没有自己的 <span class="built_in">this</span> ，如果在箭头函数中使用 <span class="built_in">this</span> ， <span class="built_in">this</span> 关键字只想箭头函数定义位置作用域(对象不能产生作用域)中的 <span class="built_in">this</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">first,...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(first); <span class="comment">//10</span></span><br><span class="line">    <span class="built_in">console</span>.log(args); <span class="comment">// [20,30]</span></span><br><span class="line">&#125;</span><br><span class="line">sum(<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>);</span><br><span class="line"><span class="number">1.</span> 剩余参数语法允许我们将一个不定数量的参数表示为一个数组</span><br><span class="line"><span class="number">2.</span> 剩余参数配合解构使用</span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;李四&#x27;</span>,<span class="string">&#x27;王五&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span>[s1,...s2] = arr1; <span class="comment">// s1:张三  s2:[’李四&#x27;,&#x27;王五&#x27;]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="扩展运算符"><a href="#扩展运算符" class="headerlink" title="扩展运算符"></a>扩展运算符</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>];</span><br><span class="line"><span class="built_in">console</span>.log(...arr); <span class="comment">//相当于  console.log(&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;);</span></span><br><span class="line">输出 a b c;</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 合并数组：</span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> arr3 = [...arr1,...arr2];</span><br><span class="line">或者  把arr2放入arr1中</span><br><span class="line">arr1.push(...arr2);</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 将伪数组转换为真正的数组</span><br><span class="line"><span class="keyword">var</span> div=<span class="built_in">document</span>.getElementByTagName(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> ary = [...div];</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="ES6-的内置对象扩展"><a href="#ES6-的内置对象扩展" class="headerlink" title="ES6 的内置对象扩展"></a>ES6 的内置对象扩展</h2><h3 id="Array的扩展方法"><a href="#Array的扩展方法" class="headerlink" title="Array的扩展方法"></a>Array的扩展方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="built_in">Array</span>.from(arrayLike,<span class="function">()=&gt;</span>&#123;&#125;); <span class="comment">//将伪数组转化为数组</span></span><br><span class="line"><span class="keyword">var</span> arrayLike=&#123;</span><br><span class="line">    <span class="string">&#x27;0&#x27;</span>:<span class="string">&#x27;1&#x27;</span>;</span><br><span class="line">    <span class="string">&#x27;1&#x27;</span>:<span class="string">&#x27;2&#x27;</span>;</span><br><span class="line">    <span class="string">&#x27;length&#x27;</span>:<span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> ary = <span class="built_in">Array</span>.from(arrayLike,<span class="function"><span class="params">item</span> =&gt;</span> item * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> ary.find(); <span class="comment">//找出第一个符合条件的数组成员，没有返回undefined</span></span><br><span class="line">ary.find( <span class="function"><span class="params">item</span> =&gt;</span> item.id == <span class="number">2</span> );</span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> arr.findIndex(); <span class="comment">//找出第一个符合条件数组的索引 没有返回 -1</span></span><br><span class="line"><span class="keyword">let</span> ary = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> index = ary.findIndex(<span class="function"><span class="params">item</span> =&gt;</span> item &gt; <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> arr.includes(); <span class="comment">//数组是否包含某个元素 返回布尔值</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>].includes(<span class="string">&#x27;a&#x27;</span>); <span class="comment">// true</span></span><br><span class="line">[<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>].includes(<span class="string">&#x27;g&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="String的扩展方法"><a href="#String的扩展方法" class="headerlink" title="String的扩展方法"></a>String的扩展方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 模板字符串   </span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;张三&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> sayHello = <span class="string">`hellomy name is <span class="subst">$&#123;name&#125;</span>`</span>; <span class="comment">// 模板字符串可以使用变量</span></span><br><span class="line"><span class="keyword">let</span> html = <span class="string">`</span></span><br><span class="line"><span class="string">	&lt;div&gt;</span></span><br><span class="line"><span class="string">		&lt;span&gt;<span class="subst">$&#123;result.name&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">		&lt;span&gt;<span class="subst">$&#123;result.age&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="string">	&lt;/div&gt;</span></span><br><span class="line"><span class="string">`</span>; <span class="comment">//模板字符串可以换行</span></span><br><span class="line"><span class="keyword">const</span> say = <span class="function">() =&gt;</span> <span class="string">&#x27;哈哈&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> great = <span class="string">`<span class="subst">$&#123;say()&#125;</span>,嘿嘿`</span>； <span class="comment">//模板字符串可以使用函数</span></span><br><span class="line"><span class="built_in">console</span>.log(great);  <span class="comment">// 哈哈，嘿嘿</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> startsWith() 和 endsWith()  <span class="comment">//判断是否以..开头和结尾 返回布尔</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;hello es6&#x27;</span>;</span><br><span class="line">str.startsWith(<span class="string">&#x27;hello&#x27;</span>);  <span class="comment">//true</span></span><br><span class="line">str.endsWith(<span class="string">&#x27;es5&#x27;</span>);	<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> repeat();  <span class="comment">//将原字符串重复n次，返回一个新字符串</span></span><br><span class="line"><span class="string">&#x27;hello&#x27;</span>.repeat(<span class="number">2</span>); <span class="comment">// &#x27;hellohello&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Set数据结构"><a href="#Set数据结构" class="headerlink" title="Set数据结构"></a>Set数据结构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set</span> 数据结构，值唯一，没有重复值</span><br><span class="line"><span class="built_in">Set</span>本身是一个构造函数</span><br><span class="line"><span class="keyword">const</span> s1 = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> 的实例属性</span><br><span class="line">s1.size</span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> 的实例方法</span><br><span class="line">s1.add(<span class="number">1</span>).add(<span class="number">2</span>);  <span class="comment">//添加 1 2</span></span><br><span class="line">s1.delete(<span class="number">2</span>);	   <span class="comment">//删除 2</span></span><br><span class="line">s1.has(<span class="number">1</span>);		   <span class="comment">//判断是否有 1  返回布尔</span></span><br><span class="line">s1.clear();		   <span class="comment">//清除 set 所有值</span></span><br><span class="line"></span><br><span class="line">遍历set</span><br><span class="line">s1.forEach(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="添加元素-insertAdjacentHTML"><a href="#添加元素-insertAdjacentHTML" class="headerlink" title="添加元素 insertAdjacentHTML();"></a>添加元素 insertAdjacentHTML();</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将指定的文本解析为 Element 元素，并将结果节点插入到DOM树中的指定位置</span></span><br><span class="line"><span class="keyword">var</span> li=<span class="string">&quot;&lt;li&gt;这是一个标签&lt;/li&gt;&quot;</span>;</span><br><span class="line">ul.insertAdjacentHTML(<span class="string">&quot;position&quot;</span>,text);</span><br><span class="line"></span><br><span class="line"><span class="comment">// position  位置</span></span><br><span class="line">&lt;!-- beforebegin --&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">  &lt;!-- afterbegin --&gt;</span><br><span class="line">  foo</span><br><span class="line">  &lt;!-- beforeend --&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;!-- afterend --&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="ES5新增方法"><a href="#ES5新增方法" class="headerlink" title="ES5新增方法"></a>ES5新增方法</h2><h3 id="数组-Array"><a href="#数组-Array" class="headerlink" title="数组 Array"></a>数组 Array</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arr.forEach()  遍历数组  <span class="keyword">return</span> 不会退出</span><br><span class="line">arr.filter()   过滤器 选出符合条件元素</span><br><span class="line">arr.some()	   循环数组  遇到 <span class="keyword">return</span> 退出</span><br><span class="line">arr.every()	   检测数组所有元素是否都符合指定条件</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串 String"></a>字符串 String</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.trim();		去除字符串两侧空格</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象-Object"><a href="#对象-Object" class="headerlink" title="对象 Object"></a>对象 Object</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.keys(obj);	查询obj中的所有属性名 返回数组</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(obj,prop,descriptor); 定义对象中新属性或者原有的属性</span><br><span class="line">descriptor: &#123;value writable enumerable configurable&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/07/html5%E5%92%8Ccss3/" rel="prev" title="html5和css3">
+      <i class="fa fa-chevron-left"></i> html5和css3
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript-ES6%E6%A0%87%E5%87%86"><span class="nav-number">1.</span> <span class="nav-text">JavaScript ES6标准</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB-Class"><span class="nav-number">1.1.</span> <span class="nav-text">类 Class</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E5%B1%9E%E6%80%A7-%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">类 构造函数 属性 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF-extends"><span class="nav-number">1.1.2.</span> <span class="nav-text">继承 extends</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E5%92%8Cthis%E6%8C%87%E5%90%91"><span class="nav-number">1.1.3.</span> <span class="nav-text">注意事项和this指向</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-%E7%9A%84%E6%96%B0%E7%94%9F%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">ES6 的新生语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#let%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.2.1.</span> <span class="nav-text">let关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.2.2.</span> <span class="nav-text">const 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="nav-number">1.2.3.</span> <span class="nav-text">数组解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84"><span class="nav-number">1.2.4.</span> <span class="nav-text">对象解构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="nav-number">1.2.5.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0"><span class="nav-number">1.2.6.</span> <span class="nav-text">剩余参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.2.7.</span> <span class="nav-text">扩展运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6-%E7%9A%84%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E6%89%A9%E5%B1%95"><span class="nav-number">1.3.</span> <span class="nav-text">ES6 的内置对象扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.1.</span> <span class="nav-text">Array的扩展方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.2.</span> <span class="nav-text">String的扩展方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.3.3.</span> <span class="nav-text">Set数据结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96"><span class="nav-number">1.4.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0-insertAdjacentHTML"><span class="nav-number">1.4.1.</span> <span class="nav-text">添加元素 insertAdjacentHTML();</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES5%E6%96%B0%E5%A2%9E%E6%96%B9%E6%B3%95"><span class="nav-number">1.5.</span> <span class="nav-text">ES5新增方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E7%BB%84-Array"><span class="nav-number">1.5.1.</span> <span class="nav-text">数组 Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-String"><span class="nav-number">1.5.2.</span> <span class="nav-text">字符串 String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1-Object"><span class="nav-number">1.5.3.</span> <span class="nav-text">对象 Object</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Backgron</p>
+  <div class="site-description" itemprop="description">平平无奇小太阳</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:1319536124@qq.com" title="E-Mail → mailto:1319536124@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" title="QQ → http:&#x2F;&#x2F;wpa.qq.com&#x2F;msgrd?v&#x3D;3&amp;uin&#x3D;&amp;site&#x3D;qq&amp;menu&#x3D;yes" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Backgron</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
